@@ -73,3 +73,6 @@ set hlsearch
 
 " 连打ESC解除高亮
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+" 完整粘贴
+set paste
