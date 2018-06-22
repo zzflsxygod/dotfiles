@@ -1,9 +1,21 @@
+" 使用vim的键盘模式
+set nocompatible
+
+" 没有保存文件或文件只读时弹出确认
+set confirm
+
+" 鼠标可用
+set mouse=a
+
 " 文字编码
 set encoding=utf-8
 set fileencodings=utf-8,sjis
 
 " 行数显示
 set number
+
+" 显示标尺
+set ruler
 
 " 关键字高亮
 syntax enable
@@ -32,6 +44,9 @@ set virtualedit=onemore
 " 自动制表符
 set smartindent
 
+" 自动对齐
+set autoindent
+
 " beep可视化
 set visualbell
 
@@ -51,10 +66,10 @@ set list listchars=tab:\▸\-
 set expandtab
 
 " 制表符4个空格
-set tabstop=4
+set tabstop=2
 
 " 行首制表符宽度
-set shiftwidth=4
+set shiftwidth=2
 
 " 搜索时不分大小写
 set ignorecase
@@ -76,3 +91,11 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " 完整粘贴
 set paste
+
+" 启动显示状态行
+set laststatus=2
+
+" 被分割窗口之间显示空白
+set fillchars=vert:/
+set fillchars=stl:/
+set fillchars=stlnc:/
