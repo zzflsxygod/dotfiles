@@ -9,7 +9,8 @@ set mouse=a
 
 " 文字编码
 set encoding=utf-8
-set fileencodings=utf-8,sjis
+set fileencodings=utf-8,gbk,big5,cp936,sjis
+
 
 " 行数显示
 set number
@@ -86,11 +87,16 @@ set wrapscan
 " 搜索文字高亮
 set hlsearch
 
+set cursorline
+
 " 连打ESC解除高亮
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " 完整粘贴
 set paste
+
+" 共享系统剪切板
+set clipboard+=unnamed
 
 " 启动显示状态行
 set laststatus=2
@@ -99,3 +105,35 @@ set laststatus=2
 set fillchars=vert:/
 set fillchars=stl:/
 set fillchars=stlnc:/
+
+" 禁止alt键映射
+set winaltkeys=no
+
+"##### GUI #####
+colorscheme Tomorrow-Night
+
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+" 窗口大小
+set lines=35 columns=140
+
+" 分割出来的窗口位于下边/右边
+" set splitbelow
+set splitright
+
+" 不显示工具/菜单
+set guioptions-=T
+"set guioptions-=m
+"set guioptions-=L
+"set guioptions-=r
+"set guioptions-=b
+
+" 使用内置tab样式
+set guioptions-=e
+set nolist
+
+" 设置字体
+"set guifont=Inconsolata:h12:cANSI
+set guifont=Consolas:h12:cANSI
+set guifontwide=SimHei:h12
