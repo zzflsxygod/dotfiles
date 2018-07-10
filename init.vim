@@ -1,3 +1,21 @@
+" vim-plug manager
+call plug#begin()
+Plug 'roxma/nvim-completion-manager'
+Plug 'honza/vim-snippets'
+
+" vim-snipmate 
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+
+" nerdtree
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
+" nerdtree
+map <C-n> :NERDTree<CR>
+map <C-o> :NERDTreeToggle<CR>
+
 if has('termguicolors')
 " set termguicolors
 endif
