@@ -1,9 +1,9 @@
 if has('termguicolors')
-set termguicolors
+" set termguicolors
 endif
 
 set number
-syntax enable
+syntax on
 set ruler
 set title
 set scrolloff=2
