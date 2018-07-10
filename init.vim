@@ -32,7 +32,7 @@ set infercase
 set hlsearch
 
 " Other
-" set cursorline
+set cursorline
 set wrap
 set colorcolumn=80
 set mouse=a
