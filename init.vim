@@ -34,6 +34,6 @@ set hlsearch
 " Other
 set cursorline
 set wrap
-set colorcolumn=80
+" set colorcolumn=80
 set mouse=a
 
