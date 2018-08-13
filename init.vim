@@ -4,10 +4,22 @@ call plug#begin()
 " nerdtree
 Plug 'scrooloose/nerdtree'
 
-" 
+" neovim color 
 Plug 'iCyMind/NeoSolarized'
+Plug 'w0ng/vim-hybrid'
+
+" complete
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" vim-lsp
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 call plug#end()
+
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " nerdtree
 map <C-n> :NERDTree<CR>
@@ -17,6 +29,24 @@ if has('termguicolors')
   set termguicolors
   colorscheme NeoSolarized
   set background=dark
+endif
+
+if has("gui_vimr")
+" Here goes some VimR specific settings like
+  set background=dark
+  colorscheme hybrid
+
+" deoplete enable
+" let g:deoplete#enable_at_startup = 1
+endif
+ 
+" vim-lsp
+if executable('pyls')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'pyls',
+    \ 'cmd': {server_info->['pyls']},
+    \ 'whitelist': ['python'],
+    \ })
 endif
 
 set number
