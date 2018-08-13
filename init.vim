@@ -4,6 +4,9 @@ call plug#begin()
 " nerdtree
 Plug 'scrooloose/nerdtree'
 
+" 
+Plug 'iCyMind/NeoSolarized'
+
 call plug#end()
 
 " nerdtree
@@ -11,7 +14,9 @@ map <C-n> :NERDTree<CR>
 map <C-o> :NERDTreeToggle<CR>
 
 if has('termguicolors')
-" set termguicolors
+  set termguicolors
+  colorscheme NeoSolarized
+  set background=dark
 endif
 
 set number
