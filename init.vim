@@ -49,6 +49,9 @@ if executable('pyls')
     \ })
 endif
 
+" complete settings
+set completeopt-=preview    " disable preview
+
 set number
 syntax on
 set ruler
